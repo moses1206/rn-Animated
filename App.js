@@ -17,11 +17,12 @@ import {
   View,
 } from 'react-native';
 import AnimationOne from './src/AnimationOne';
+import AnimationTwo from './src/AnimationTwo';
 
 const App = () => {
   return (
     <View style={styles.container}>
-      <AnimationOne />
+      <AnimationTwo />
     </View>
   );
 };
@@ -30,6 +31,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
+    paddingTop: 50,
   },
 });
 

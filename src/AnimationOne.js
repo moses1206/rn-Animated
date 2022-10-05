@@ -54,6 +54,8 @@ const AnimationOne = () => {
                 // fade가 1일때 0(제자리)이 대응함.
                 outputRange: [700, 350, 0],
               }),
+            },
+            {
               rotateX: fadeValue.interpolate({
                 inputRange: [0, 0.5, 1],
                 outputRange: ['0deg', '180deg', '360deg'],
@@ -63,6 +65,19 @@ const AnimationOne = () => {
         }}>
         <View style={styles.square}></View>
       </Animated.View>
+      <Animated.Text
+        style={{
+          fontSize: fadeValue.interpolate({
+            inputRange: [0, 0.5, 1],
+            outputRange: [40, 30, 20],
+          }),
+          color: fadeValue.interpolate({
+            inputRange: [0, 0.5, 1],
+            outputRange: ['red', 'green', 'blue'],
+          }),
+        }}>
+        <Text>Animation Effects</Text>
+      </Animated.Text>
       <Button title="Ani Start" onPress={fadeAnimation} />
     </View>
   );
